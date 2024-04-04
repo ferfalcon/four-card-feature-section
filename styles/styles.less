@@ -63,11 +63,41 @@ img {
 }
 
 .features-section {
+	padding: 4rem 0;
+}
+
+.features-section__heading {
+	font: var(--ty-heading-light);
+	text-align: center;
+	width: 90%;
+	max-width: 19.438rem;
+	margin: 0 auto 1rem;
+}
+
+.features-section__heading-accent {
+	font: var(--ty-heading-bold);
+	display: block;
+}
+
+.features-section__copy {
+	font: var(--ty-copy);
+	text-align: center;
+	width: 90%;
+	max-width: 19.438rem;
+	margin: 0 auto 4.75rem;
+	opacity: .5;
+}
+
+.features-section__cards-wrapper {
 	display: grid;
 	gap: 1.5rem;
 	width: 90%;
 	max-width: 19.438rem;
 	margin: auto;
+
+	@media (min-width:64rem) {
+		max-width: 69.375rem;
+	}
 }
 
 .features-section__feature {
