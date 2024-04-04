@@ -1,10 +1,10 @@
 :root {
   --cl-neutral-100: hsl(0, 0%, 98%);
-  --cl-neutral-500: hsl(232, 22%, 38%);
-  --cl-cyan: hsl(180, 62%, 55%);
-  --cl-red: hsl(0, 78%, 62%);
-  --cl-orange: hsl(34, 96%, 64%);
-  --cl-blue: hsl(212, 86%, 64%);
+  --cl-neutral-500: hsla(232, 22%, 38%);
+  --cl-supervisor: hsl(180, 62%, 55%);
+  --cl-team-builder: hsl(0, 78%, 62%);
+  --cl-karma: hsl(34, 96%, 64%);
+  --cl-calculator: hsl(212, 86%, 64%);
   --ff-main: "Poppins", sans-serif;
   --fs-200: 0.813rem;
   --fs-400: 0.938rem;
@@ -47,9 +47,51 @@ img {
 }
 .features-section {
   display: grid;
+  gap: 1.5rem;
   width: 90%;
   max-width: 19.438rem;
   margin: auto;
+}
+.features-section__feature {
+  display: grid;
+  padding: 1.75rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.938rem 1.875rem -0.688rem hsla(213, 47%, 67%, 0.5);
+  position: relative;
+  overflow: hidden;
+}
+.features-section__feature::before {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 0.25rem;
+  top: 0;
+  left: 0;
+}
+.features-section__feature--supervisor::before {
+  background: var(--cl-supervisor);
+}
+.features-section__feature--team-builder::before {
+  background: var(--cl-team-builder);
+}
+.features-section__feature--karma::before {
+  background: var(--cl-karma);
+}
+.features-section__feature--calculator::before {
+  background: var(--cl-calculator);
+}
+.features-section__feature-name {
+  font: var(--ty-section-heading);
+  margin: 0 0 0.25rem;
+}
+.features-section__feature-copy {
+  font: var(--ty-section-copy);
+  margin: 0 0 2.063rem;
+  opacity: 0.5;
+}
+.features-section__feature-icon {
+  justify-self: end;
 }
 .signature {
   position: absolute;
